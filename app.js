@@ -88,9 +88,9 @@ observador();
 function aparece(user) {
   var user = user
   var contenido = document.getElementById('contenido')
-  botonRegistro = document.getElementById("registro")
-  botonIngreso = document.getElementById("ingreso")
-  // botonReset = document.getElementById("reset")
+  var botonRegistro = document.getElementById("registro")
+  var botonIngreso = document.getElementById("ingreso")
+  var botonReset = document.getElementById("reset")
   // $("botonIngreso").attr('disabled', 'disabled')
   // $("botonRegistro").attr('disabled', 'disabled')
   // $("botonReset").attr('disabled', 'disabled')
