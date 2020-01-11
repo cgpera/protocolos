@@ -21,7 +21,6 @@ function registrar() {
 }
 
 function ingreso() {
-  console.log('diste click ingreso')
   var email2 = document.getElementById('email2').value
   var password2 = document.getElementById('password2').value
   firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function (error) {
@@ -88,18 +87,7 @@ observador();
 function aparece(user) {
   var user = user
   var contenido = document.getElementById('contenido')
-  botonRegistro = document.getElementById("registro")
-  botonIngreso = document.getElementById("ingreso")
-  // botonReset = document.getElementById("reset")
-  // $("botonIngreso").attr('disabled', 'disabled')
-  // $("botonRegistro").attr('disabled', 'disabled')
-  // $("botonReset").attr('disabled', 'disabled')
-  botonIngreso.disabled = true
-  botonRegistro.disabled = true
-  botonReset.disabled = true
-
   if (user.emailVerified) {
-
     contenido.innerHTML = `
       <div class="container mt-4">
         <div class="alert alert-success" role="alert">
@@ -117,13 +105,7 @@ function aparece(user) {
 function cerrar() {
   firebase.auth().signOut()
     .then(function () {
-      // botonRegistro = document.getElementById("registro")
-      // botonIngreso = document.getElementById("ingreso")
-      // botonReset = document.getElementById("reset")
-      $("#botonIngreso").attr('disabled', false)
-      $("#botonRegistro").attr('disabled', false)
-      $("#botonReset").attr('disabled', false)
-            console.log('saliendo...')
+      console.log('saliendo...')
     })
     .catch(function (error) {
       console.log(error)
