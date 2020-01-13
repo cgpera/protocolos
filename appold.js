@@ -24,7 +24,8 @@ function ingreso() {
   console.log('diste click ingreso')
   var email2 = document.getElementById('email2').value
   var password2 = document.getElementById('password2').value
-  firebase.auth().signInWithEmailAndPassword(email2, password2).catch(function (error) {
+  firebase.auth().signInWithEmailAndPassword(email2, password2)
+    .catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -57,6 +58,7 @@ function observador() {
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+
       // [START_EXCLUDE]
       //      document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
       //      document.getElementById('quickstart-sign-in').textContent = 'Sign out';
@@ -88,15 +90,13 @@ observador();
 function aparece(user) {
   var user = user
   var contenido = document.getElementById('contenido')
-  var botonRegistro = document.getElementById("registro")
-  var botonIngreso = document.getElementById("ingreso")
-  var botonReset = document.getElementById("reset")
-  // $("botonIngreso").attr('disabled', 'disabled')
-  // $("botonRegistro").attr('disabled', 'disabled')
-  // $("botonReset").attr('disabled', 'disabled')
-  botonIngreso.disabled = true
-  botonRegistro.disabled = true
-  botonReset.disabled = true
+
+  document.getElementById('email2').disabled = true
+  document.getElementById('password2').disabled = true
+  document.getElementById('registro').disabled = true
+  document.getElementById("ingreso").disabled = true
+  document.getElementById("reset").disabled = true
+
 
   if (user.emailVerified) {
 
@@ -117,13 +117,12 @@ function aparece(user) {
 function cerrar() {
   firebase.auth().signOut()
     .then(function () {
-      // botonRegistro = document.getElementById("registro")
-      // botonIngreso = document.getElementById("ingreso")
-      // botonReset = document.getElementById("reset")
-      $("#botonIngreso").attr('disabled', false)
-      $("#botonRegistro").attr('disabled', false)
-      $("#botonReset").attr('disabled', false)
-            console.log('saliendo...')
+      document.getElementById('email2').disabled = false
+      document.getElementById('password2').disabled = false
+      document.getElementById('registro').disabled = false
+      document.getElementById("ingreso").disabled = false
+      document.getElementById("reset").disabled = false
+                console.log('saliendo...')
     })
     .catch(function (error) {
       console.log(error)

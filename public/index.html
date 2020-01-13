@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -43,11 +43,11 @@
                     class="form-control form-control-sm mr-sm-2">
                 <input type="password" name="password" id="password2" placeholder="Ingrese contraseña: "
                     class="form-control form-control-sm mr-sm-2">
-                <button class="btn btn-secondary my-2 my-sm-0 btn-sm" type="submit" id="ingreso" onclick="ingreso()">Acceder</button>
-                <button class="btn btn-warning my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
-                    data-target="#exampleModal" id="registro" >Registrar</button>
-                <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
-                    data-target="#passReset" id="reset">Password Reset</button>
+                <button id="ingreso" class="btn btn-secondary my-2 my-sm-0 btn-sm" type="submit" onclick="ingreso()">Acceder</button>
+                <button id="registro" class="btn btn-warning my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                    data-target="#exampleModal">Registrar</button>
+                <button id="reset" class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                    data-target="#passReset">Password Reset</button>
             </div>
         </nav>
     </div>
@@ -57,13 +57,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Formulario de Registro:</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Registro de nuevo usuario</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <input type=" email" id="email" placeholder="Ingrese email: " class="form-control">
+                    <input type="text" id="empresa" placeholder="Empresa:" class="form-control">
+                    <div class="mt-2"></div>
+                    <input type="email" id="email" placeholder="Ingrese email: " class="form-control">
                     <div class="mt-2"></div>
                     <input type="password" id="password" placeholder="Ingrese contraseña: " class="form-control">
                 </div>
@@ -115,7 +117,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
