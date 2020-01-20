@@ -139,7 +139,7 @@ function aparece(user) {
               </tr>
             </table>
         </div>
-          <button onclick="cerrar()" class="btn btn-warning">Cerrar Sesión</button>
+          <button onclick="cerrar()" class="btn btn-warning"><i class="material-icons right">input</i>Cerrar Sesión</button>
       </div>
     `
   }

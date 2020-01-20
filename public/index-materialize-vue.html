@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body>
+
+    <div class="container section">
+        <!-- <div class="row"> -->
+
+        <div class="row">
+            <div class="col s12 m">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img class="responsive-img" src="person-holding-laboratory-flask-2280571.jpg">
+                        <!-- <span class="card-title yellow-text text-lighten-3">MATCO</span> -->
+                    </div>
+                    <div class="card-content">
+                        <h3 class="blue-grey-text text-darken-1">Laboratorio Matco</h3>
+                        <h5>Recuperación de protocolos</h5>
+                    </div>
+                    <!-- <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <form class="col s12 m">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="container section">
+                <button id="ingreso" class="btn btn-secondary my-2 my-sm-0 btn-sm" type="submit"
+                    onclick="ingreso()">Acceder</button>
+                <button id="registro" class="btn btn-warning my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                    data-target="#exampleModal">Registrarse</button>
+                <button id="reset" class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                    data-target="#passReset">Password Reset</button>
+            </div>
+
+
+            <!-- <button id="ingreso" class="btn btn-secondary my-2 my-sm-0 btn-sm" type="submit"
+                onclick="ingreso()">Acceder</button>
+            <button id="registro" class="btn btn-warning my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                data-target="#exampleModal">Registrarse</button>
+            <button id="reset" class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
+                data-target="#passReset">Password Reset</button> -->
+
+            <!-- <div class="row">
+                    <div class="col s12">
+                        This is an inline input field:
+                        <div class="input-field inline">
+                            <input id="email_inline" type="email" class="validate">
+                            <label for="email_inline">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                        </div>
+                    </div>
+                </div> -->
+        </form>
+
+    </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit()
+        });
+    </script>
+    <script src="appvue.js"></script>
+</body>
+
+</html>
