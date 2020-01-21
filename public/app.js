@@ -85,7 +85,7 @@ function observador() {
       console.log('No existe usuario activo')
       contenido.innerHTML = `
       <div class="container mt-4">
-        <div class="alert alert-info" role="alert">
+        <div class="alert alert-warning" role="alert">
           Sesión no iniciada
         </div>
       </div>
@@ -112,7 +112,7 @@ function aparece(user) {
   if (user.emailVerified) {
     contenido.innerHTML = `
       <div class="container mt-4">
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-info" role="alert">
           <h4 class="alert-heading">${user.email} ${user.displayName}</h4>
           <p>A continuación estará la lista de protocolos disponibles para visualización y descarga</p>
           <hr>

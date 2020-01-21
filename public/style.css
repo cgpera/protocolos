@@ -1,0 +1,12 @@
+div.row {
+    margin-bottom: 0;
+}
+
+div#modal1.modal.open, div#passReset.modal.open {
+    height: auto;
+}
+
+div.card-content {
+    vertical-align: middle;
+    text-align: center;
+}

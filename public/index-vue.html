@@ -14,7 +14,6 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -44,97 +43,52 @@
 
 
 
-    <div class="container section" id="doc">
+    <div class="container section" id="app">
         <!-- <div class="row"> -->
 
         <div class="row">
             <div class="col s12">
-                <h3>Matco Sistema de Impresión de Protocolos</h3>
-                <div class="card">
+                <div class="card horizontal">
                     <div class="row">
                         <div class="col s7">
                             <div class="card-image">
-                                <img src="person-putting-a-drop-on-test-tube-954583.jpg">
-                                <span class="card-title grey-text text-darken-3">MATCO</span>
+                                <img src="person-holding-laboratory-flask-2280571.jpg">
+                                <span class="card-title yellow-text text-lighten-3">MATCO</span>
                             </div>
 
                         </div>
                         <div class="col s5">
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <h1>Laboratorio Matco</h3>
-                                        <h4>Recuperación de protocolos</h4>
-                                </div>
+                            <div class="card-content">
+                                <h1>Laboratorio Matco</h3>
+                                    <h4>Recuperación de protocolos</h4>
                             </div>
+
                         </div>
                     </div>
-                    <!-- <div class="card-action">
-                        <a href="#"></a>
-                    </div> -->
                 </div>
             </div>
         </div>
-        <!-- <form class="col s12 m">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                        <label for="disabled">Disabled</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email"type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                </div> -->
-        <!-- <div class="row">
-                    <div class="col s12">
-                        This is an inline input field:
-                        <div class="input-field inline">
-                            <input id="email_inline" type="email" class="validate">
-                            <label for="email_inline">Email</label>
-                            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                        </div>
-                    </div>
-                </div> -->
-        <!-- <div class="container mt-3">
-                    <nav class="navbar navbar-dark bg-primary">
-                        <a class="navbar-brand">Bienvenido a MATCO - Visualización de Protocolos</a> -->
         <div class="form-inline">
+
+
             <input type="email" name="email" id="email2" placeholder="Ingrese email: "
-                class="form-control form-control-sm mr-sm-2">
+                class="form-control form-control-sm mr-sm-2" v-model="email2">
+
             <input type="password" name="password" id="password2" placeholder="Ingrese contraseña: "
-                class="form-control form-control-sm mr-sm-2">
+                class="form-control form-control-sm mr-sm-2" v-model="password2">
+
 
             <button id="ingreso" class="btn waves-effect waves-light" type="submit" onclick="ingreso()"><i
                     class="material-icons left">check_circle</i>Acceder</button>
-            <!-- <button id="registro" class="btn btn-warning my-2 my-sm-0 btn-sm ml-2" type="submit" data-toggle="modal"
-                data-target="#exampleModal">Registrar</button> -->
 
             <div class="mr-2"></div>
 
-            <button data-target="modal1" id="registro" class="btn modal-trigger waves-effect waves-light"><i
+            <button data-target="modal1" id="registro" class="btn blue-grey modal-trigger waves-effect waves-light"><i
                     class="large material-icons right">person</i>Registrar</button>
             <!-- Modal Trigger -->
             <div class="mr-4"></div>
             <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
-            <button id="reset" class="btn modal-trigger waves-effect waves-light" type="submit" data-toggle="modal"
+            <button id="reset" class="btn red modal-trigger waves-effect waves-light" type="submit" data-toggle="modal"
                 data-target="passReset"><i class="material-icons right">loop</i>Password Reset</button>
         </div>
 
@@ -145,9 +99,6 @@
                     <h5 class="modal-title" id="exampleModalLabel">Registro de nuevo usuario</h5>
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i
                             class="material-icons">close</i></a>
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button> -->
                 </div>
                 <div class="modal-body">
                     <input type="text" id="empresa" placeholder="Empresa:" class="form-control" required>
@@ -158,36 +109,11 @@
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
-                    <button type="button" class="btn modal-close waves-effect waves-green btn-flat" onclick="registrar()">Guardar</button>
-                    <a href="#!" class="btn modal-close waves-effect waves-green btn-flat">Cerrar</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registro de nuevo usuario</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="empresa" placeholder="Empresa:" class="form-control">
-                    <div class="mt-2"></div>
-                    <input type="email" id="email" placeholder="Ingrese email: " class="form-control">
-                    <div class="mt-2"></div>
-                    <input type="password" id="password" placeholder="Ingrese contraseña: " class="form-control">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary" onclick="registrar()">Guardar</button>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
                 </div>
             </div>
         </div>
-    </div> -->
 
         <div class="modal" id="passReset">
             <div class="modal-content">
@@ -206,20 +132,20 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn modal-close waves-effect waves-green btn-flat"
-                        onclick="resetPass()">Restablecer</button>
-                    <button type="button" class="btn modal-close waves-effect waves-green btn-flat"
                         data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn modal-close waves-effect waves-green btn-flat"
+                        onclick="resetPass()">Restablecer</button>
                 </div>
             </div>
         </div>
 
 
+        <p>{{email2}}</p>
 
-        <!-- </nav>
-                </div>
-            </form> -->
+        <p>{{password2}}</p>
+        <p>{{mensaje}}</p>
 
-        <!-- </div> -->
+
     </div>
 
     <div id="contenido">
@@ -227,12 +153,30 @@
     </div>
 
     <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             M.AutoInit()
         });
 
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                email2: '',
+                password2: '',
+                mensaje: 'Hola Vue!'
+            },
+            methods: {
+                addmessage: function() {
+                    this.mensaje = this.mensaje + this.email2 + this.password2
+                }
+            }
+        })
+        var pass = data.password2
+        console.log(pass)
     </script>
     <script src="app.js"></script>
 
