@@ -103,6 +103,7 @@ observador();
 function aparece(user) {
   var user = user
   var contenido = document.getElementById('contenido')
+  document.getElementById('formLogin').className = 'form-inline hide'
   document.getElementById('email2').disabled = true
   document.getElementById('password2').disabled = true
   document.getElementById('registro').disabled = true
@@ -154,6 +155,7 @@ function cerrar() {
       document.getElementById('registro').disabled = false
       document.getElementById("ingreso").disabled = false
       document.getElementById("reset").disabled = false
+      document.getElementById('formLogin').className = 'form-inline'
       console.log('saliendo...')
     })
     .catch(function (error) {
